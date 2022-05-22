@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "582970663903",
+    "firebase_url": "https://pisau-tulungagung-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    "project_id": "pisau-tulungagung",
+    "storage_bucket": "pisau-tulungagung.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582970663903:android:b68f5f7defea68b9ee5a6a",
+        "android_client_info": {
+          "package_name": "pepe.pisau.bos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "582970663903-n7m7r3osm5tgjhutc490dgnp9oh6de9h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxwFwL2_hflO-7C6ktfSJZMwvIKNQS-a8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "582970663903-n7m7r3osm5tgjhutc490dgnp9oh6de9h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
