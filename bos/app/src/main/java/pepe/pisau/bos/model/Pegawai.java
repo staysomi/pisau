@@ -1,4 +1,4 @@
-package pepe.pisau.bos.data;
+package pepe.pisau.bos.model;
 
 public class Pegawai {
     private String alamat;

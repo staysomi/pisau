@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class Dashboard extends AppCompatActivity {
 
     TextView nama;
-    Button list_peg;
+    Button list_peg, list_lap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,16 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent inte = new Intent(Dashboard.this, ListPegawaiActivity.class);
+                inte.putExtra("nama", strnama);
+                startActivity(inte);
+            }
+        });
+
+        list_lap = findViewById(R.id.list_laporan);
+        list_lap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inte = new Intent(Dashboard.this, ListLaporanActivity.class);
                 inte.putExtra("nama", strnama);
                 startActivity(inte);
             }

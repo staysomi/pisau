@@ -23,9 +23,19 @@
 
     <Button
         android:text="LIST PEGAWAI"
-        android:background="#666"
+        android:background="#660"
         android:layout_margin="20dp"
         android:id="@+id/list_pegawai"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/list_laporan"
+        android:text="LIST LAPORAN"
+        android:background="#060"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/list_pegawai"
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

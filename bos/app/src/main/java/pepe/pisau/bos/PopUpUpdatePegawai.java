@@ -23,12 +23,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import pepe.pisau.bos.data.Data;
-import pepe.pisau.bos.data.Pegawai;
 
 public class PopUpUpdatePegawai {
 
     String strid, strhp, stralamat, strpassword;
-    Pegawai pegawai;
 
     public void showPopupWindow(final View view, String paramid) {
         LayoutInflater inflater = (LayoutInflater) view.getContext().getSystemService(view.getContext().LAYOUT_INFLATER_SERVICE);
@@ -43,20 +41,20 @@ public class PopUpUpdatePegawai {
 
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
-        TextView id = popupView.findViewById(R.id.update_id);
-        EditText hp = popupView.findViewById(R.id.update_hp);
-        EditText alamat = popupView.findViewById(R.id.update_alamat);
-        EditText password = popupView.findViewById(R.id.update_password);
+        TextView tvid = popupView.findViewById(R.id.update_id);
+        EditText ethp = popupView.findViewById(R.id.update_hp);
+        EditText etalamat = popupView.findViewById(R.id.update_alamat);
+        EditText etpassword = popupView.findViewById(R.id.update_password);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance(Data.DATABASE_URL);
         DatabaseReference mbase = database.getReference("pegawai").child(paramid);
         mbase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                id.setText(snapshot.child("id").getValue(String.class));
-                hp.setText(snapshot.child("hp").getValue(String.class));
-                alamat.setText(snapshot.child("alamat").getValue(String.class));
-                password.setText(snapshot.child("password").getValue(String.class));
+                tvid.setText(snapshot.child("id").getValue(String.class));
+                ethp.setText(snapshot.child("hp").getValue(String.class));
+                etalamat.setText(snapshot.child("alamat").getValue(String.class));
+                etpassword.setText(snapshot.child("password").getValue(String.class));
             }
 
             @Override
@@ -68,16 +66,22 @@ public class PopUpUpdatePegawai {
         btn_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                strid = id.getText().toString();
-                strhp = hp.getText().toString();
-                stralamat = alamat.getText().toString();
-                strpassword = password.getText().toString();
+                strid = tvid.getText().toString();
+                strhp = ethp.getText().toString();
+                stralamat = etalamat.getText().toString();
+                strpassword = etpassword.getText().toString();
                 if (strhp.isEmpty() || strpassword.isEmpty() || stralamat.isEmpty()) {
                     Toast.makeText(view.getContext(), "Isi Data", Toast.LENGTH_SHORT).show();
                 } else {
                     updateDataFirebase(strid, strhp, stralamat, strpassword);
                     Toast.makeText(view.getContext(), "Sukses Ubah", Toast.LENGTH_SHORT).show();
-                    popupWindow.dismiss();
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            popupWindow.dismiss();
+                        }
+                    }, 3000);
                 }
             }
         });
@@ -86,7 +90,7 @@ public class PopUpUpdatePegawai {
         btn_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                strid = id.getText().toString();
+                strid = tvid.getText().toString();
                 AlertDialog.Builder b1 = new AlertDialog.Builder(view.getContext());
                 b1.setMessage("Yakin Ingin Menghapus ?");
                 b1.setCancelable(true);
@@ -140,6 +144,7 @@ public class PopUpUpdatePegawai {
     }
 
     private void updateDataFirebase(String id, String hp, String alamat, String pass) {
+        Log.e("TAG", "updateDataFirebase: " + id+hp+alamat+pass );
         FirebaseDatabase dbup = FirebaseDatabase.getInstance(Data.DATABASE_URL);
         DatabaseReference dbupdate = dbup.getReference("pegawai").child(id);
         dbupdate.child("alamat").setValue(alamat);

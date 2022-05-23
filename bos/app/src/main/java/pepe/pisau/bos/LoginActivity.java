@@ -20,6 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import pepe.pisau.bos.data.Data;
 import pepe.pisau.bos.data.Pref;
 
 public class LoginActivity extends AppCompatActivity {
@@ -42,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         pref = new Pref(this);
         mAuth = FirebaseAuth.getInstance();
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance("https://pisau-tulungagung-default-rtdb.asia-southeast1.firebasedatabase.app");
+        FirebaseDatabase database = FirebaseDatabase.getInstance(Data.DATABASE_URL);
         DatabaseReference userRef = database.getReference();
 
 //        DAFTAR USER

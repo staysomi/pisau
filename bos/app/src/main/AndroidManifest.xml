@@ -18,6 +18,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".DetailLaporanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListLaporanActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListPegawaiActivity"
             android:exported="false" />
         <activity

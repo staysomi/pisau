@@ -1,6 +1,5 @@
 package pepe.pisau.bos;
 
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +17,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import pepe.pisau.bos.data.Pegawai;
+import pepe.pisau.bos.data.Data;
+import pepe.pisau.bos.model.Pegawai;
 
 public class PopUpAddPegawai {
 
@@ -74,7 +74,7 @@ public class PopUpAddPegawai {
         pegawai.setHp(hp);
         pegawai.setAlamat(alamat);
         pegawai.setPassword(password);
-        FirebaseDatabase database = FirebaseDatabase.getInstance("https://pisau-tulungagung-default-rtdb.asia-southeast1.firebasedatabase.app/");
+        FirebaseDatabase database = FirebaseDatabase.getInstance(Data.DATABASE_URL);
 
         DatabaseReference mbase = database.getReference("pegawai").child(id);
         // we are use add value event listener method

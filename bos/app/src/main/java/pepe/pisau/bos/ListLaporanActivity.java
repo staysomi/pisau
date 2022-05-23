@@ -19,20 +19,20 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import pepe.pisau.bos.adapter.PegawaiAdapter;
+import pepe.pisau.bos.adapter.LaporanAdapter;
 import pepe.pisau.bos.data.Data;
-import pepe.pisau.bos.model.Pegawai;
+import pepe.pisau.bos.model.Laporan;
 
-public class ListPegawaiActivity extends AppCompatActivity {
+public class ListLaporanActivity extends AppCompatActivity {
 
-    PegawaiAdapter adapter;
-    DatabaseReference mbase;
-    RecyclerView recyclerView;
+    LaporanAdapter adapterlaporan;
+    DatabaseReference dblaporan;
+    RecyclerView rvLaporan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_pegawai);
+        setContentView(R.layout.activity_list_laporan);
 
         String nama = getIntent().getStringExtra("nama");
         TextView textView = findViewById(R.id.tv_nama);
@@ -40,22 +40,22 @@ public class ListPegawaiActivity extends AppCompatActivity {
         textView.setAllCaps(true);
         FirebaseDatabase database = FirebaseDatabase.getInstance(Data.DATABASE_URL);
 
-        mbase = database.getReference("pegawai");
+        dblaporan = database.getReference("pegawai");
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
 
-        recyclerView = findViewById(R.id.rv_pegawai);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setHasFixedSize(true);
+        rvLaporan = findViewById(R.id.rv_laporan);
+        rvLaporan.setLayoutManager(linearLayoutManager);
+        rvLaporan.setHasFixedSize(true);
 
-        Query qu = mbase;
+        Query qu = dblaporan;
         qu.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                List<Pegawai> list = new ArrayList<>();
+                List<Laporan> list = new ArrayList<>();
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    list.add(postSnapshot.getValue(Pegawai.class));
-                    adapter =  new PegawaiAdapter(ListPegawaiActivity.this, list);
-                    recyclerView.setAdapter(adapter);
+                    list.add(postSnapshot.getValue(Laporan.class));
+                    adapterlaporan =  new LaporanAdapter(ListLaporanActivity.this, list);
+                    rvLaporan.setAdapter(adapterlaporan);
                 }
             }
 
@@ -65,16 +65,7 @@ public class ListPegawaiActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton add = findViewById(R.id.add_pegawai);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopUpAddPegawai popUpClass = new PopUpAddPegawai();
-                popUpClass.showPopupWindow(v);
-            }
-        });
-
-        ImageButton refresh = findViewById(R.id.refresh_pegawai);
+        ImageButton refresh = findViewById(R.id.refresh_laporan);
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -9,10 +9,14 @@
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/drawable/edittext.xml" value="0.332" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/drawable/ic_username.xml" value="0.332" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_dashboard.xml" value="0.33" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_laporan.xml" value="0.36666666666666664" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_laporan_pekerjaan.xml" value="0.36666666666666664" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_list_pegawai.xml" value="0.36666666666666664" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_login.xml" value="0.35260416666666666" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/add_pegawai_layout.xml" value="0.365625" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/detail_laporan.xml" value="0.36666666666666664" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/laporan.xml" value="0.36666666666666664" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/pegawai.xml" value="0.365625" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/update_pegawai_layout.xml" value="0.18802083333333333" />
       </map>
