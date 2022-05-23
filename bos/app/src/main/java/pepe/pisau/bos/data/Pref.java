@@ -11,7 +11,7 @@ public class Pref {
 
     private static Context mContext;
 
-    Pref(Context ctx){
+    public Pref(Context ctx){
         mContext = ctx;
         sharedPreferences = mContext.getSharedPreferences("APK", Context.MODE_PRIVATE);
     }

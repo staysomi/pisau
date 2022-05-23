@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@color/black"
+    android:padding="10dp"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/update_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext"
+        android:drawablePadding="@dimen/padding_large"
+        android:inputType="text"
+        android:padding="@dimen/padding_normal"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/update_hp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/update_id"
+        android:layout_marginTop="@dimen/padding_small_10"
+        android:background="@drawable/edittext"
+        android:drawablePadding="@dimen/padding_large"
+        android:hint="No HP"
+        android:inputType="number"
+        android:padding="@dimen/padding_normal"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/update_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/update_hp"
+        android:layout_marginTop="@dimen/padding_small_10"
+        android:background="@drawable/edittext"
+        android:drawablePadding="@dimen/padding_large"
+        android:hint="Alamat"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/padding_normal"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/update_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/update_alamat"
+        android:layout_marginTop="@dimen/padding_small_10"
+        android:background="@drawable/edittext"
+        android:drawablePadding="@dimen/padding_large"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="@dimen/padding_normal"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/btn_pp_update_pegawai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/update_password"
+        android:layout_marginTop="@dimen/padding_small_10"
+        android:background="@drawable/button_login"
+        android:text="Update Pegawai" />
+
+    <Button
+        android:id="@+id/btn_pp_delete_pegawai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_pp_update_pegawai"
+        android:layout_marginTop="@dimen/padding_small_10"
+        android:background="@drawable/button_cek"
+        android:text="Delete Pegawai" />
+
+    <Button
+        android:id="@+id/btn_ppu_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_pp_delete_pegawai"
+        android:layout_marginTop="@dimen/padding_small_10"
+        android:background="@drawable/button_radius"
+        android:text="Close" />
+
+</RelativeLayout>

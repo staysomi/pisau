@@ -21,6 +21,7 @@ public class Dashboard extends AppCompatActivity {
         String strnama = getIntent().getStringExtra("nama");
         nama = findViewById(R.id.tv_nama);
         nama.setText(strnama);
+        nama.setAllCaps(true);
 
         list_peg = findViewById(R.id.list_pegawai);
         list_peg.setOnClickListener(new View.OnClickListener() {

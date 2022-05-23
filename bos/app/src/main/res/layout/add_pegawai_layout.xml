@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@color/black"
+    android:padding="10dp"
+    android:layout_margin="20dp">
+
+    <EditText
+        android:id="@+id/add_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext"
+        android:drawablePadding="@dimen/padding_large"
+        android:hint="Nama"
+        android:inputType="text"
+        android:padding="@dimen/padding_normal"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/add_hp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_id"
+        android:layout_marginTop="@dimen/padding_small_10"
+        android:background="@drawable/edittext"
+        android:drawablePadding="@dimen/padding_large"
+        android:hint="No HP"
+        android:inputType="number"
+        android:padding="@dimen/padding_normal"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/add_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_hp"
+        android:layout_marginTop="@dimen/padding_small_10"
+        android:background="@drawable/edittext"
+        android:drawablePadding="@dimen/padding_large"
+        android:hint="Alamat"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/padding_normal"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/add_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_alamat"
+        android:layout_marginTop="@dimen/padding_small_10"
+        android:background="@drawable/edittext"
+        android:drawablePadding="@dimen/padding_large"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="@dimen/padding_normal"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/btn_pp_add_pegawai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_password"
+        android:layout_marginTop="@dimen/padding_small_10"
+        android:background="@drawable/button_login"
+        android:text="Tambah Pegawai" />
+
+    <Button
+        android:id="@+id/btn_pp_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_pp_add_pegawai"
+        android:layout_marginTop="@dimen/padding_small_10"
+        android:background="@drawable/button_cek"
+        android:text="Close" />
+
+</RelativeLayout>
