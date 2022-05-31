@@ -8,16 +8,26 @@
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/drawable/button_radius.xml" value="0.237" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/drawable/edittext.xml" value="0.332" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/drawable/ic_username.xml" value="0.332" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/drawable/status_accept.xml" value="0.118" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/drawable/status_pending.xml" value="0.118" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/drawable/status_reject.xml" value="0.118" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/acrion_detail.xml" value="0.24818840579710144" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/action_detail.xml" value="0.33" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_dashboard.xml" value="0.33" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_detail_laporan.xml" value="0.24818840579710144" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_laporan.xml" value="0.36666666666666664" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_laporan_pekerjaan.xml" value="0.36666666666666664" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_list_laporan.xml" value="0.36666666666666664" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_list_pegawai.xml" value="0.36666666666666664" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_login.xml" value="0.35260416666666666" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/add_pegawai_layout.xml" value="0.365625" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/card_pegawai.xml" value="0.24818840579710144" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/detail.xml" value="0.36666666666666664" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/detail_laporan.xml" value="0.36666666666666664" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/laporan.xml" value="0.36666666666666664" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/pegawai.xml" value="0.365625" />
+        <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/popup_action_detail.xml" value="0.36666666666666664" />
         <entry key="..\:/PepeProgram/Pisau/bos/app/src/main/res/layout/update_pegawai_layout.xml" value="0.18802083333333333" />
       </map>
     </option>

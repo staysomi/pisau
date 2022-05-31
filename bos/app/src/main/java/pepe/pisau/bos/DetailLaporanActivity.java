@@ -29,6 +29,7 @@ public class DetailLaporanActivity extends AppCompatActivity {
     DetailLaporanAdapter adapterdlaporan;
     DatabaseReference dbdlaporan;
     RecyclerView rvdLaporan;
+    TextView ongkostotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,28 @@ public class DetailLaporanActivity extends AppCompatActivity {
                     adapterdlaporan =  new DetailLaporanAdapter(DetailLaporanActivity.this, list);
                     rvdLaporan.setAdapter(adapterdlaporan);
                 }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        ongkostotal = findViewById(R.id.total_ongkos);
+        Query qw = dbdlaporan.orderByChild("status").equalTo("accepted");
+        qw.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                List<Integer> total = new ArrayList<>();
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    total.add(postSnapshot.child("ongkostotal").getValue(Integer.class));
+                }
+                int sum = 0;
+                for(int i = 0; i < total.size(); i++){
+                    sum += total.get(i);
+                }
+                ongkostotal.setText("Total Ongkos : " + sum);
             }
 
             @Override

@@ -24,26 +24,68 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/header_laporan"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="5dp"
-        android:text="LIST LAPORAN"
-        android:textColor="@color/black"
-        android:textSize="@dimen/font_large" />
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="start"
+            android:text="Pekerjaan"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:text="Produk"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Qty"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="right"
+            android:text="Ongkos"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_detail_laporan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar"
-        android:layout_marginStart="10dp"
+        android:layout_above="@+id/total_ongkos"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_normal"
+        android:id="@+id/total_ongkos"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <ImageButton
         android:id="@+id/refresh_detail_laporan"

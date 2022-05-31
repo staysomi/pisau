@@ -1,4 +1,4 @@
-package pepe.pisau.bos.adapter;
+package pepe.pisau.pegawai.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,10 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import pepe.pisau.bos.PopupActionDetail;
-import pepe.pisau.bos.PopupDetail;
-import pepe.pisau.bos.R;
-import pepe.pisau.bos.model.DetailLaporan;
+import pepe.pisau.pegawai.R;
+import pepe.pisau.pegawai.model.DetailLaporan;
+
 
 public class DetailLaporanAdapter extends RecyclerView.Adapter<DetailLaporanAdapter.ViewHolder> {
 
@@ -41,13 +40,13 @@ public class DetailLaporanAdapter extends RecyclerView.Adapter<DetailLaporanAdap
         holder.ongkos.setText(String.valueOf(DetailLaporan.getOngkostotal()));
         holder.status.setText(String.valueOf(DetailLaporan.getStatus()));
         holder.itemView.setOnClickListener(v -> {
-            if (DetailLaporan.getStatus().equals("pending")){
-                PopupActionDetail popUpClass = new PopupActionDetail();
-                popUpClass.showPopupWindow(v, DetailLaporan.getId(), DetailLaporan.getNama());
-            } else {
-                PopupDetail popUpClass = new PopupDetail();
-                popUpClass.showPopupWindow(v, DetailLaporan.getId(), DetailLaporan.getNama());
-            }
+//            if (DetailLaporan.getStatus().equals("pending")){
+//                PopupActionDetail popUpClass = new PopupActionDetail();
+//                popUpClass.showPopupWindow(v, DetailLaporan.getId(), DetailLaporan.getNama());
+//            } else {
+//                PopupDetail popUpClass = new PopupDetail();
+//                popUpClass.showPopupWindow(v, DetailLaporan.getId(), DetailLaporan.getNama());
+//            }
         });
     }
 

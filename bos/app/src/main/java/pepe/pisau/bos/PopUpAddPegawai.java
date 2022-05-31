@@ -26,7 +26,7 @@ public class PopUpAddPegawai {
 
     public void showPopupWindow(final View view) {
         LayoutInflater inflater = (LayoutInflater) view.getContext().getSystemService(view.getContext().LAYOUT_INFLATER_SERVICE);
-        View popupView = inflater.inflate(R.layout.add_pegawai_layout, null);
+        View popupView = inflater.inflate(R.layout.popup_add_pegawai, null);
 
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.MATCH_PARENT;

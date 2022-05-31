@@ -1,4 +1,4 @@
-package pepe.pisau.bos.model;
+package pepe.pisau.pegawai.model;
 
 public class DetailLaporan {
     private String id;

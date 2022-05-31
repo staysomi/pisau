@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/det"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:id="@+id/tvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+
+                android:id="@+id/tvv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvv_pkr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvv_id"
+                android:text="Pekerjaan"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvv_prd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvv_pkr"
+                android:text="Produk"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvv_ttl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvv_prd"
+                android:text="Total"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvv_onk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvv_ttl"
+                android:text="Ongkos"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@+id/tvv">
+
+            <TextView
+                android:id="@+id/tv_idad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="agung"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_pkrad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_idad"
+                android:text="123qw"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_prdad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_pkrad"
+                android:text="aw"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_ttl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_prdad"
+                android:text="12"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_onk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ttl"
+                android:text="12312"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bukti"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/det"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/ln_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bukti"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/accept"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:background="#090"
+            android:text="Terima" />
+
+        <Button
+            android:id="@+id/reject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:background="#900"
+            android:text="Tolak" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_ad_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ln_bt"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="@dimen/padding_small_10"
+        android:text="Close" />
+
+</RelativeLayout>

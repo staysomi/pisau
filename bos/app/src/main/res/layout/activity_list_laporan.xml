@@ -22,15 +22,57 @@
             android:textColor="@color/white"
             android:textSize="@dimen/font_large" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:text="LAPORAN"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large" />
+
     </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="5dp"
+        android:layout_marginStart="30dp"
         android:text="LIST LAPORAN"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_large" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_toStartOf="@+id/all_tr"
+        android:layout_marginEnd="10dp"
+
+        android:text="TP"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_large" />
+
+    <TextView
+        android:id="@+id/all_tr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/all_ta"
+        android:text="TR"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_large" />
+
+    <TextView
+        android:id="@+id/all_ta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:text="TA"
         android:textColor="@color/black"
         android:textSize="@dimen/font_large" />
 
@@ -42,6 +84,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="10dp"
+        android:layout_above="@+id/all_expla"
         android:layout_marginBottom="10dp" />
 
     <ImageButton
@@ -58,5 +101,15 @@
         android:background="@drawable/button_radius"
         android:src="@drawable/ic_baseline_refresh_24" />
 
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/all_expla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
+        android:text="TP = Total Pending\nTR = Total Reject (Tolak)\nTA = Total Accept (Terima)"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_small" />
 
 </RelativeLayout>
