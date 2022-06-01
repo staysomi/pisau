@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">BM Arify Pegawai</string>
+    <string name="laporan_toolbar">LAPORAN </string>
+    <string name="total_ongkos">"Total Ongkos : "</string>
+
 </resources>

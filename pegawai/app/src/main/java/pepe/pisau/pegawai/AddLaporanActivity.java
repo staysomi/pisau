@@ -25,13 +25,18 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 import pepe.pisau.pegawai.data.Data;
@@ -221,6 +226,8 @@ public class AddLaporanActivity extends AppCompatActivity {
     }
 
     private void addDatatoFirebase(String bukti, String id, String nama, int ongkostotal, String pekerjaan, String produk, String status, int total) {
+        Timestamp ts = new Timestamp(System.currentTimeMillis());
+        Date date = new Date(ts.getTime());
         laporan = new Laporan();
         laporan.setBukti(bukti);
         laporan.setId(id);
@@ -230,6 +237,7 @@ public class AddLaporanActivity extends AppCompatActivity {
         laporan.setProduk(produk);
         laporan.setStatus(status);
         laporan.setTotal(total);
+        laporan.setDate(date);
         DatabaseReference dbl = FirebaseDatabase.getInstance(Data.DATABASE_URL).getReference("laporan").child(nama).child(id);
 
         dbl.addValueEventListener(new ValueEventListener() {

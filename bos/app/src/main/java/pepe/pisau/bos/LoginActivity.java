@@ -120,9 +120,14 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 strpassword = String.valueOf(password.getText());
                 if (arrPass.get(0).equals(strpassword)) {
-                    Intent inte = new Intent(LoginActivity.this, Dashboard.class);
-                    inte.putExtra("nama", strusername);
-                    startActivity(inte);
+                    mAuth.signInWithEmailAndPassword("bos@gmail.com", "bosbos123")
+                            .addOnCompleteListener(LoginActivity.this, task -> {
+                                if (task.isSuccessful()) {
+                                    Intent inte = new Intent(LoginActivity.this, Dashboard.class);
+                                    inte.putExtra("nama", strusername);
+                                    startActivity(inte);
+                                }
+                            });
                 } else {
                     Toast.makeText(LoginActivity.this, "Password Salah", Toast.LENGTH_SHORT).show();
                 }

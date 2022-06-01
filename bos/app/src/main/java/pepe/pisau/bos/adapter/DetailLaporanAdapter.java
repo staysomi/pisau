@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import pepe.pisau.bos.PopupActionDetail;
@@ -35,11 +36,13 @@ public class DetailLaporanAdapter extends RecyclerView.Adapter<DetailLaporanAdap
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         DetailLaporan DetailLaporan = list.get(position);
+        SimpleDateFormat dateformat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         holder.pekerjaan.setText(DetailLaporan.getPekerjaan());
         holder.produk.setText(DetailLaporan.getProduk());
         holder.total.setText(String.valueOf(DetailLaporan.getTotal()));
         holder.ongkos.setText(String.valueOf(DetailLaporan.getOngkostotal()));
         holder.status.setText(String.valueOf(DetailLaporan.getStatus()));
+        holder.date.setText(dateformat.format(DetailLaporan.getDate()));
         holder.itemView.setOnClickListener(v -> {
             if (DetailLaporan.getStatus().equals("pending")){
                 PopupActionDetail popUpClass = new PopupActionDetail();
@@ -57,11 +60,7 @@ public class DetailLaporanAdapter extends RecyclerView.Adapter<DetailLaporanAdap
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView pekerjaan;
-        public TextView produk;
-        public TextView total;
-        public TextView ongkos;
-        public TextView status;
+        public TextView pekerjaan, produk, total, ongkos, status, date;
         public ViewHolder(View itemView) {
             super(itemView);
             pekerjaan = (TextView) itemView.findViewById(R.id.tv_pekerjaan);
@@ -69,6 +68,7 @@ public class DetailLaporanAdapter extends RecyclerView.Adapter<DetailLaporanAdap
             total = (TextView) itemView.findViewById(R.id.tv_total);
             ongkos = (TextView) itemView.findViewById(R.id.tv_ongkos);
             status = (TextView) itemView.findViewById(R.id.tv_status);
+            date = (TextView) itemView.findViewById(R.id.tv_date);
         }
     }
 }

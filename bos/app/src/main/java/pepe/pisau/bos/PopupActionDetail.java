@@ -78,55 +78,37 @@ public class PopupActionDetail {
                 acce(paramid, paramnama);
                 Toast.makeText(view.getContext(), "Sukses Terima", Toast.LENGTH_SHORT).show();
                 Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        popupWindow.dismiss();
-                    }
-                }, 3000);
+                handler.postDelayed(popupWindow::dismiss, 3000);
             }
         });
 
         rej = popupView.findViewById(R.id.reject);
-        rej.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                strid = tvid.getText().toString();
-                AlertDialog.Builder b1 = new AlertDialog.Builder(view.getContext());
-                b1.setMessage("Yakin Ingin Menolak ?");
-                b1.setCancelable(true);
+        rej.setOnClickListener(v -> {
+            strid = tvid.getText().toString();
+            AlertDialog.Builder b1 = new AlertDialog.Builder(view.getContext());
+            b1.setMessage("Yakin Ingin Menolak ?");
+            b1.setCancelable(true);
 
-                b1.setPositiveButton("Tolak", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        reje(paramid, paramnama);
-                        Toast.makeText(view.getContext(), "Sukses Tolak", Toast.LENGTH_SHORT).show();
-                        Handler handler = new Handler();
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                popupWindow.dismiss();
-                            }
-                        }, 3000);
-                    }
-                });
-                b1.setNegativeButton("BATAL", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                AlertDialog alert11 = b1.create();
-                alert11.show();
-            }
+            b1.setPositiveButton("Tolak", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    reje(paramid, paramnama);
+                    Toast.makeText(view.getContext(), "Sukses Tolak", Toast.LENGTH_SHORT).show();
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            popupWindow.dismiss();
+                        }
+                    }, 3000);
+                }
+            });
+            b1.setNegativeButton("BATAL", (dialog, which) -> dialog.dismiss());
+            AlertDialog alert11 = b1.create();
+            alert11.show();
         });
 
         adc = popupView.findViewById(R.id.btn_ad_close);
-        adc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popupWindow.dismiss();
-            }
-        });
+        adc.setOnClickListener(v -> popupWindow.dismiss());
     }
 
     private void acce(String id, String nama) {

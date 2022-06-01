@@ -21,6 +21,9 @@
             android:name=".AddLaporanActivity"
             android:exported="false" />
         <activity
+            android:name=".UpdateLaporanActivity"
+            android:exported="false" />
+        <activity
             android:name=".Dashboard"
             android:exported="false" />
         <activity

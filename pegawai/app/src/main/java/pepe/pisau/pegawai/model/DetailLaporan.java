@@ -1,5 +1,7 @@
 package pepe.pisau.pegawai.model;
 
+import java.util.Date;
+
 public class DetailLaporan {
     private String id;
     private String pekerjaan;
@@ -9,11 +11,12 @@ public class DetailLaporan {
     private String bukti;
     private int total;
     private int ongkostotal;
+    private Date date;
 
     public DetailLaporan() {
     }
 
-    public DetailLaporan(String id, String pekerjaan, String produk, int total, int ongkostotal, String status, String nama, String bukti) {
+    public DetailLaporan(String id, String pekerjaan, String produk, int total, int ongkostotal, String status, String nama, String bukti, Date date) {
         this.id = id;
         this.pekerjaan = pekerjaan;
         this.produk = produk;
@@ -22,6 +25,7 @@ public class DetailLaporan {
         this.status = status;
         this.nama = nama;
         this.bukti = bukti;
+        this.date = date;
     }
 
     public String getId() {
@@ -85,5 +89,13 @@ public class DetailLaporan {
 
     public void setOngkostotal(int ongkostotal) {
         this.ongkostotal = ongkostotal;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

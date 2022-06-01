@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="10dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="20dp"
+    android:layout_marginVertical="5dp"
     android:scrollbars="vertical"
     app:cardCornerRadius="10dp">
 
@@ -17,37 +16,102 @@
             android:id="@+id/row"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Pekerjaan"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
 
             <TextView
                 android:id="@+id/tv_pekerjaan"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:gravity="start"
-                android:text="Nyekir"
+                android:gravity="end"
+                android:text="Pekerjaan"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_small" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Produk"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
             <TextView
                 android:id="@+id/tv_produk"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:gravity="center_horizontal"
+                android:layout_weight="4"
+                android:gravity="end"
                 android:text="Arit"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_below="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Total"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
 
             <TextView
                 android:id="@+id/tv_total"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
+                android:layout_weight="4"
+                android:gravity="end"
                 android:text="100"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row2"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Ongkos"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_small" />
 
@@ -55,22 +119,35 @@
                 android:id="@+id/tv_ongkos"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="4"
                 android:gravity="end"
                 android:text="10000"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_small" />
-
         </LinearLayout>
+
         <TextView
-            android:layout_alignParentEnd="true"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_below="@+id/row"
             android:id="@+id/tv_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/row3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
             android:text="pending"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row3"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
+            android:text="date"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="@dimen/font_small" />

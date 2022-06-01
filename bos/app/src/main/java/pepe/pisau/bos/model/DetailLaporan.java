@@ -1,19 +1,22 @@
 package pepe.pisau.bos.model;
 
+import java.util.Date;
+
 public class DetailLaporan {
-    private String id;
-    private String pekerjaan;
-    private String produk;
-    private String status;
-    private String nama;
-    private String bukti;
-    private int total;
-    private int ongkostotal;
+    String bukti;
+    String id;
+    String nama;
+    int ongkostotal;
+    String pekerjaan;
+    String produk;
+    String status;
+    int total;
+    Date date;
 
     public DetailLaporan() {
     }
 
-    public DetailLaporan(String id, String pekerjaan, String produk, int total, int ongkostotal, String status, String nama, String bukti) {
+    public DetailLaporan(String id, String pekerjaan, String produk, int total, int ongkostotal, String status, String nama, String bukti, Date date) {
         this.id = id;
         this.pekerjaan = pekerjaan;
         this.produk = produk;
@@ -22,6 +25,7 @@ public class DetailLaporan {
         this.status = status;
         this.nama = nama;
         this.bukti = bukti;
+        this.date = date;
     }
 
     public String getId() {
@@ -47,6 +51,7 @@ public class DetailLaporan {
     public void setProduk(String produk) {
         this.produk = produk;
     }
+
     public String getBukti() {
         return bukti;
     }
@@ -85,5 +90,13 @@ public class DetailLaporan {
 
     public void setOngkostotal(int ongkostotal) {
         this.ongkostotal = ongkostotal;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
