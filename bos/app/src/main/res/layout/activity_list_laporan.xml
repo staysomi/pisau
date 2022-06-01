@@ -20,72 +20,27 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
             android:textColor="@color/white"
-            android:textSize="@dimen/font_large" />
+            android:textSize="@dimen/font_normal" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_margin="5dp"
-            android:text="LAPORAN"
+            android:layout_margin="10dp"
+            android:text="JUMLAH"
             android:textColor="@color/white"
-            android:textSize="@dimen/font_large" />
+            android:textSize="@dimen/font_normal" />
 
     </RelativeLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:layout_marginStart="30dp"
-        android:text="LIST LAPORAN"
-        android:textColor="@color/black"
-        android:textSize="@dimen/font_large" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:layout_toStartOf="@+id/all_tr"
-        android:layout_marginEnd="10dp"
-
-        android:text="TP"
-        android:textColor="@color/black"
-        android:textSize="@dimen/font_large" />
-
-    <TextView
-        android:id="@+id/all_tr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:layout_marginEnd="10dp"
-        android:layout_toStartOf="@+id/all_ta"
-        android:text="TR"
-        android:textColor="@color/black"
-        android:textSize="@dimen/font_large" />
-
-    <TextView
-        android:id="@+id/all_ta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="30dp"
-        android:text="TA"
-        android:textColor="@color/black"
-        android:textSize="@dimen/font_large" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_laporan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/refresh_laporan"
         android:layout_below="@+id/toolbar"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="10dp"
-        android:layout_above="@+id/all_expla"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginTop="5dp" />
 
     <ImageButton
         android:id="@+id/refresh_laporan"
@@ -93,23 +48,9 @@
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/button_radius"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_refresh"
         android:src="@drawable/ic_baseline_refresh_24" />
 
-    <TextView
-        android:layout_alignParentBottom="true"
-        android:id="@+id/all_expla"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_margin="10dp"
-        android:text="TP = Total Pending\nTR = Total Reject (Tolak)\nTA = Total Accept (Terima)"
-        android:textColor="@color/black"
-        android:textSize="@dimen/font_small" />
 
 </RelativeLayout>

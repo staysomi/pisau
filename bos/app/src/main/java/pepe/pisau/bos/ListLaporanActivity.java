@@ -36,7 +36,7 @@ public class ListLaporanActivity extends AppCompatActivity {
 
         String nama = getIntent().getStringExtra("nama");
         TextView textView = findViewById(R.id.tv_nama);
-        textView.setText(nama);
+        textView.setText("BOS " + nama);
         textView.setAllCaps(true);
         FirebaseDatabase database = FirebaseDatabase.getInstance(Data.DATABASE_URL);
 
@@ -54,7 +54,7 @@ public class ListLaporanActivity extends AppCompatActivity {
                 List<Laporan> list = new ArrayList<>();
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     list.add(postSnapshot.getValue(Laporan.class));
-                    adapterlaporan =  new LaporanAdapter(ListLaporanActivity.this, list);
+                    adapterlaporan = new LaporanAdapter(ListLaporanActivity.this, list);
                     rvLaporan.setAdapter(adapterlaporan);
                 }
             }
@@ -66,12 +66,9 @@ public class ListLaporanActivity extends AppCompatActivity {
         });
 
         ImageButton refresh = findViewById(R.id.refresh_laporan);
-        refresh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-                startActivity(getIntent());
-            }
+        refresh.setOnClickListener(v -> {
+            finish();
+            startActivity(getIntent());
         });
     }
 }

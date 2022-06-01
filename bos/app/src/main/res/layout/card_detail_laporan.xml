@@ -34,7 +34,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:gravity="end"
+                android:gravity="start"
                 android:text="Pekerjaan"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_small" />
@@ -62,7 +62,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:gravity="end"
+                android:gravity="start"
                 android:text="Arit"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_small" />
@@ -92,7 +92,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:gravity="end"
+                android:gravity="start"
                 android:text="100"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_small" />
@@ -120,7 +120,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:gravity="end"
+                android:gravity="start"
                 android:text="10000"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_small" />
