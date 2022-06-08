@@ -1,10 +1,10 @@
 package pepe.pisau.bos.model;
 
 public class Pegawai {
-    private String alamat;
-    private String hp;
-    private String id;
-    private String password;
+    public String alamat;
+    public String hp;
+    public String id;
+    public String password;
 
     public Pegawai() {
     }

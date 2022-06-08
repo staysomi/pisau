@@ -1,7 +1,7 @@
 package pepe.pisau.bos.model;
 
 public class Laporan {
-    private String id;
+    public String id;
 
     public Laporan() {
     }

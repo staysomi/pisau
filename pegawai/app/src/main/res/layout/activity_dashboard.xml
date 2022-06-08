@@ -43,15 +43,16 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:textColor="@color/black"
-        android:textSize="@dimen/font_small"
-        android:text="Klik item untuk edit laporan"
-        android:layout_marginBottom="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Klik item untuk edit laporan\nHanya Pending yang bisa diedit"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_small" />
 
     <ImageButton
         android:id="@+id/refresh_detail_laporan"

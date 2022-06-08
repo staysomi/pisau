@@ -127,4 +127,9 @@ public class Dashboard extends AppCompatActivity {
         AlertDialog alert11 = builder1.create();
         alert11.show();
     }
+
+    public void close(){
+        finish();
+        System.exit(0);
+    }
 }

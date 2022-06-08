@@ -40,7 +40,7 @@ public class ListPegawaiActivity extends AppCompatActivity {
         textView.setAllCaps(true);
         FirebaseDatabase database = FirebaseDatabase.getInstance(Data.DATABASE_URL);
 
-        mbase = database.getReference("pegawai");
+        mbase = database.getReference("pegawai/");
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
 
         recyclerView = findViewById(R.id.rv_pegawai);

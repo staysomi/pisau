@@ -3,15 +3,15 @@ package pepe.pisau.bos.model;
 import java.util.Date;
 
 public class DetailLaporan {
-    String bukti;
-    String id;
-    String nama;
-    int ongkostotal;
-    String pekerjaan;
-    String produk;
-    String status;
-    int total;
-    Date date;
+    public String bukti;
+    public String id;
+    public String nama;
+    public int ongkostotal;
+    public String pekerjaan;
+    public String produk;
+    public String status;
+    public int total;
+    public Date date;
 
     public DetailLaporan() {
     }
